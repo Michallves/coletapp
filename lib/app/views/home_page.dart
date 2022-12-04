@@ -19,7 +19,54 @@ class HomePage extends StatelessWidget {
             ),
           )
         ]),
-        drawer: Drawer(child: SingleChildScrollView()),
+        drawer: Drawer(
+            child: Column(
+          children: [
+            Container(
+              alignment: Alignment.center,
+              color: Colors.green,
+              width: double.infinity,
+              height: 150,
+              child: Image.asset(
+                'assets/images/coletapp.png',
+                fit: BoxFit.contain,
+                width: 100,
+              ),
+            ),
+            SingleChildScrollView(
+                child: Column(
+              children: [
+                ListTile(
+                  leading: Icon(Icons.home),
+                  style: ListTileStyle.drawer,
+                  title: Text('Inicio'),
+                  textColor: Colors.grey[600],
+                ),
+                const Divider(),
+                ListTile(
+                  leading: Image.asset(
+                    'assets/images/rotas.png',
+                    color: Colors.grey[500],
+                    width: 30,
+                  ),
+                  style: ListTileStyle.drawer,
+                  title: const Text('Rotas'),
+                  textColor: Colors.grey[600],
+                ),
+                const Divider(),
+                ListTile(
+                  leading: Icon(
+                    Icons.warning,
+                  ),
+                  style: ListTileStyle.drawer,
+                  title: Text('Dénuncias'),
+                  textColor: Colors.grey[600],
+                ),
+                Divider(),
+              ],
+            )),
+          ],
+        )),
         body: SafeArea(
             child: Column(
           children: [
@@ -32,14 +79,14 @@ class HomePage extends StatelessWidget {
             const Divider(
               thickness: 5,
             ),
-            Expanded(flex: 2, child: Container(child: Text('sdfsdfasdf'))),
+            const Expanded(flex: 2, child: Text('sdfsdfasdf')),
             Container(
               height: 60,
               color: Theme.of(context).primaryColor,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Container(
+                  SizedBox(
                     width: 140,
                     child: Text(
                       'Termo de uso e politica de privacidade',
@@ -55,7 +102,7 @@ class HomePage extends StatelessWidget {
                     fit: BoxFit.contain,
                     width: 60,
                   ),
-                  Container(
+                  SizedBox(
                     width: 140,
                     child: Text(
                       'Termo de uso e politica de privacidade',
