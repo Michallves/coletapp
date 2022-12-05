@@ -5,15 +5,16 @@ import 'package:get/get.dart';
 import '../models/routes_modal.dart';
 
 class HomeController extends GetxController {
-  Rx<String> screen = Rx<String>('home');
-  Rx<List<RoutesModal>> routesList = Rx<List<RoutesModal>>([]);
-  List<RoutesModal> get routes => routesList.value;
+  RxBool isLoading = RxBool(false);
+  Rx<String> screen = Rx<String>('routes');
+
+  RxList<RoutesModal> routesList = RxList<RoutesModal>([]);
 
   GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void onInit() {
-    routesList.bindStream(readRoutes());
+    readRoutes();
 
     super.onInit();
   }
@@ -40,17 +41,22 @@ class HomeController extends GetxController {
     }
   }
 
-  Stream<List<RoutesModal>> readRoutes() {
-    return FirebaseFirestore.instance
-        .collection('routes')
-        .snapshots()
-        .map((snapshot) {
-      List<RoutesModal> routes = [];
-      for (var messageData in snapshot.docs) {
-        routes.add(RoutesModal.fromMap(messageData.data() as dynamic));
-      }
-
-      return routes;
-    });
+  readRoutes() async {
+    isLoading.value = true;
+    FirebaseFirestore firestore = FirebaseFirestore.instance;
+    try {
+      await firestore
+          .collection("routes")
+          .orderBy("street", descending: false)
+          .get()
+          .then((doc) {
+        for (var doc in doc.docs) {
+          routesList.add(RoutesModal.fromJson(doc.data()));
+          ;
+        }
+      });
+    } finally {
+      isLoading.value = false;
+    }
   }
 }

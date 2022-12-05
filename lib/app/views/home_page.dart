@@ -1,4 +1,6 @@
 import 'package:coletapp/app/models/routes_modal.dart';
+import 'package:coletapp/app/routes/app_routes.dart';
+import 'package:coletapp/app/widgets/route_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/home_controller.dart';
@@ -11,6 +13,13 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       key: controller.scaffoldKey,
+      floatingActionButton: Obx(() => controller.screen == 'complaints'
+          ? FloatingActionButton(
+              onPressed: () => Get.toNamed(Routes.CREATECOMPLAINT),
+              backgroundColor: Colors.green,
+              child: const Icon(Icons.add),
+            )
+          : Container()),
       appBar: AppBar(
           title: Obx(() => Text('${controller.screenTitle()}')),
           actions: [
@@ -41,9 +50,7 @@ class HomePage extends StatelessWidget {
               child: Column(
             children: [
               ListTile(
-                onTap: () {
-                  controller.readRoutes();
-                },
+                onTap: () => controller.screen.value = 'home',
                 leading: const Icon(Icons.home),
                 style: ListTileStyle.drawer,
                 title: const Text('Inicio'),
@@ -76,21 +83,55 @@ class HomePage extends StatelessWidget {
         ],
       )),
       body: SafeArea(
-          child: GetBuilder<HomeController>(
-              builder: (_) => ListView.separated(
-                  padding: const EdgeInsets.all(10),
-                  separatorBuilder: (_, ___) => const Divider(),
-                  itemCount: controller.routesList.value.length,
-                  itemBuilder: ((context, index) {
-                    final RoutesModal route =
-                        controller.routesList.value[index];
-                    return ListTile(
-                      textColor: Colors.black,
-                      title: Text(
-                        route.address!,
-                      ),
-                    );
-                  })))),
+          child: Obx(() => controller.isLoading == false
+              ? controller.screen == 'home'
+                  ? ListView.separated(
+                      padding: const EdgeInsets.all(10),
+                      separatorBuilder: (_, ___) => const Divider(),
+                      itemCount: controller.routesList.length,
+                      itemBuilder: ((context, index) {
+                        final RoutesModal route = controller.routesList[index];
+                        return ListTile(
+                          textColor: Colors.black,
+                          title: Text(
+                            route.district!,
+                          ),
+                        );
+                      }))
+                  : controller.screen == 'complaints'
+                      ? ListView.separated(
+                          padding: const EdgeInsets.all(10),
+                          separatorBuilder: (_, ___) => const Divider(),
+                          itemCount: controller.routesList.length,
+                          itemBuilder: ((context, index) {
+                            final RoutesModal route =
+                                controller.routesList[index];
+                            return ListTile(
+                              textColor: Colors.black,
+                              title: Text(
+                                route.district!,
+                              ),
+                            );
+                          }))
+                      : controller.screen == 'routes'
+                          ? ListView.builder(
+                              padding: const EdgeInsets.all(10),
+                              itemCount: controller.routesList.length,
+                              itemBuilder: ((context, index) {
+                                final RoutesModal route =
+                                    controller.routesList[index];
+                                return RouteWidget(
+                                  district: route.district,
+                                  street: route.street,
+                                  date: route.date,
+                                );
+                              }))
+                          : Container()
+              : const Center(
+                  child: CircularProgressIndicator(
+                    color: Colors.green,
+                  ),
+                ))),
     );
   }
 }

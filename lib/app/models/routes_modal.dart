@@ -1,27 +1,24 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-
 class RoutesModal {
-  final String? address;
+  final String? district;
+  final String? street;
+  final Map? date;
 
-  RoutesModal({this.address});
-
-  RoutesModal.fromMap(Map<String, dynamic> map) : address = map['address'];
-
-  Map toMap() {
-    return {
-      'address': address,
-    };
-  }
+  RoutesModal({this.district, this.street, this.date});
 
   Map<String, dynamic> toJson() {
     return {
-      "address": address,
+      "district": district,
+      "street": street,
+      "date": date
     };
   }
 
   factory RoutesModal.fromJson(Map<String, dynamic> json) {
     return RoutesModal(
-      address: json["address"],
+      district: json["district"],
+      street: json["street"],
+      date: json["date"],
     );
   }
 }
