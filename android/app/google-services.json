@@ -1,78 +1,34 @@
 {
   "project_info": {
-    "project_number": "571712219416",
-    "firebase_url": "https://appbank-darm-default-rtdb.firebaseio.com",
-    "project_id": "appbank-darm",
-    "storage_bucket": "appbank-darm.appspot.com"
+    "project_number": "1094794676817",
+    "project_id": "coletapp-8022f",
+    "storage_bucket": "coletapp-8022f.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:571712219416:android:be2888f86554c6e592566d",
-        "android_client_info": {
-          "package_name": "com.example.appbankdarm"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "571712219416-puf34qto9tia2rr32t31v4vl2qa7vtsu.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBn7gSYZpCZTSLhXclLJXRDVBt-JpJq234"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "571712219416-puf34qto9tia2rr32t31v4vl2qa7vtsu.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "571712219416-jvsju48tpeeo8lcgbvq4iluo946tid61.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.appbankdarm"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:571712219416:android:5f6c9c18ea991e2892566d",
+        "mobilesdk_app_id": "1:1094794676817:android:9b5e2a64fc32e87ade4670",
         "android_client_info": {
           "package_name": "com.example.coletapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "571712219416-puf34qto9tia2rr32t31v4vl2qa7vtsu.apps.googleusercontent.com",
+          "client_id": "1094794676817-ckk31kgeh16gsduvcjuo60brg6j11ics.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBn7gSYZpCZTSLhXclLJXRDVBt-JpJq234"
+          "current_key": "AIzaSyCAAweRgkJXc-ohnFeRPZSeCHWD7O8AgBA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "571712219416-puf34qto9tia2rr32t31v4vl2qa7vtsu.apps.googleusercontent.com",
+              "client_id": "1094794676817-ckk31kgeh16gsduvcjuo60brg6j11ics.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "571712219416-jvsju48tpeeo8lcgbvq4iluo946tid61.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.appbankdarm"
-              }
             }
           ]
         }

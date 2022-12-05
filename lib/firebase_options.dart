@@ -44,44 +44,40 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCyq5FIgzOey1K5GbMKpQbJku7eAXlbmR4',
-    appId: '1:571712219416:web:acdb65b70552ac1292566d',
-    messagingSenderId: '571712219416',
-    projectId: 'appbank-darm',
-    authDomain: 'appbank-darm.firebaseapp.com',
-    databaseURL: 'https://appbank-darm-default-rtdb.firebaseio.com',
-    storageBucket: 'appbank-darm.appspot.com',
-    measurementId: 'G-D5F7J809TV',
+    apiKey: 'AIzaSyDZtJ9Ba59-PEhvqJehcbaSvwkg9MEeSf4',
+    appId: '1:1094794676817:web:c5421829aba5aed5de4670',
+    messagingSenderId: '1094794676817',
+    projectId: 'coletapp-8022f',
+    authDomain: 'coletapp-8022f.firebaseapp.com',
+    storageBucket: 'coletapp-8022f.appspot.com',
+    measurementId: 'G-5BP17G3Y98',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBn7gSYZpCZTSLhXclLJXRDVBt-JpJq234',
-    appId: '1:571712219416:android:5f6c9c18ea991e2892566d',
-    messagingSenderId: '571712219416',
-    projectId: 'appbank-darm',
-    databaseURL: 'https://appbank-darm-default-rtdb.firebaseio.com',
-    storageBucket: 'appbank-darm.appspot.com',
+    apiKey: 'AIzaSyCAAweRgkJXc-ohnFeRPZSeCHWD7O8AgBA',
+    appId: '1:1094794676817:android:9b5e2a64fc32e87ade4670',
+    messagingSenderId: '1094794676817',
+    projectId: 'coletapp-8022f',
+    storageBucket: 'coletapp-8022f.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDn1HM19XEihQ6kvDbGuYorVKXtM28Umcc',
-    appId: '1:571712219416:ios:1f54e829faa9fdd792566d',
-    messagingSenderId: '571712219416',
-    projectId: 'appbank-darm',
-    databaseURL: 'https://appbank-darm-default-rtdb.firebaseio.com',
-    storageBucket: 'appbank-darm.appspot.com',
-    iosClientId: '571712219416-f3ofmspn9g57kotlh9re462og418p56u.apps.googleusercontent.com',
+    apiKey: 'AIzaSyCLqonJz16Zjx2BhtJqNBEUwgkCco3dyfU',
+    appId: '1:1094794676817:ios:bee49f4b5f5e48cede4670',
+    messagingSenderId: '1094794676817',
+    projectId: 'coletapp-8022f',
+    storageBucket: 'coletapp-8022f.appspot.com',
+    iosClientId: '1094794676817-8fpqq2por8fo6u4mba3goqgpcnucj7se.apps.googleusercontent.com',
     iosBundleId: 'com.example.coletapp',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDn1HM19XEihQ6kvDbGuYorVKXtM28Umcc',
-    appId: '1:571712219416:ios:1f54e829faa9fdd792566d',
-    messagingSenderId: '571712219416',
-    projectId: 'appbank-darm',
-    databaseURL: 'https://appbank-darm-default-rtdb.firebaseio.com',
-    storageBucket: 'appbank-darm.appspot.com',
-    iosClientId: '571712219416-f3ofmspn9g57kotlh9re462og418p56u.apps.googleusercontent.com',
+    apiKey: 'AIzaSyCLqonJz16Zjx2BhtJqNBEUwgkCco3dyfU',
+    appId: '1:1094794676817:ios:bee49f4b5f5e48cede4670',
+    messagingSenderId: '1094794676817',
+    projectId: 'coletapp-8022f',
+    storageBucket: 'coletapp-8022f.appspot.com',
+    iosClientId: '1094794676817-8fpqq2por8fo6u4mba3goqgpcnucj7se.apps.googleusercontent.com',
     iosBundleId: 'com.example.coletapp',
   );
 }

@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 import 'app/routes/app_pages.dart';
 import 'config.dart';
 
-
 Future<void> main() async {
   await initConfigurations();
 
@@ -14,6 +13,6 @@ Future<void> main() async {
     debugShowCheckedModeBanner: false,
     theme: appThemeData,
     getPages: AppPages.routes,
-    initialRoute: Routes.HOME,
+    initialRoute: Routes.INITIAL,
   ));
 }
