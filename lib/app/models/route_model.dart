@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 class RoutesModal {
   final String? district;
   final String? street;

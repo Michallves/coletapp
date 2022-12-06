@@ -1,5 +1,7 @@
-import 'package:coletapp/app/models/routes_modal.dart';
+import 'package:coletapp/app/models/complaint_model.dart';
+import 'package:coletapp/app/models/route_model.dart';
 import 'package:coletapp/app/routes/app_routes.dart';
+import 'package:coletapp/app/widgets/complaint_widget.dart';
 import 'package:coletapp/app/widgets/route_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -99,18 +101,16 @@ class HomePage extends StatelessWidget {
                         );
                       }))
                   : controller.screen == 'complaints'
-                      ? ListView.separated(
+                      ? ListView.builder(
                           padding: const EdgeInsets.all(10),
-                          separatorBuilder: (_, ___) => const Divider(),
-                          itemCount: controller.routesList.length,
+                          itemCount: controller.complaintsList.length,
                           itemBuilder: ((context, index) {
-                            final RoutesModal route =
-                                controller.routesList[index];
-                            return ListTile(
-                              textColor: Colors.black,
-                              title: Text(
-                                route.district!,
-                              ),
+                            final ComplaintModel complaint =
+                                controller.complaintsList[index];
+                            return Complaintwidget(
+                              description: complaint.description,
+                              district: complaint.district,
+                              street: complaint.street,
                             );
                           }))
                       : controller.screen == 'routes'

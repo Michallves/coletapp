@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class RouteWidget extends StatefulWidget {
-  final Map? date;
+  
   const RouteWidget({super.key, this.district, this.street, this.date});
-
+  final Map? date;
   final String? district;
   final String? street;
 
