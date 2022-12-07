@@ -97,36 +97,7 @@ class _CreateComplaintPageState extends State<CreateComplaintPage> {
                               )
                             : Image.network(image)),
                   ),
-                  Container(
-                      margin: const EdgeInsets.symmetric(horizontal: 20),
-                      child: DropdownButton(
-                          dropdownColor: Colors.white,
-                          focusColor: Colors.transparent,
-                          hint: const Text(
-                            'Bairro',
-                            style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black),
-                          ),
-                          style: const TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.black),
-                          itemHeight: 70,
-                          isExpanded: true,
-                          value: district,
-                          items: controller.routesList.map((route) {
-                            return DropdownMenuItem(
-                              value: route.district,
-                              child: Text(route.district!),
-                            );
-                          }).toList(),
-                          onChanged: (newValue) {
-                            setState(() {
-                              district = newValue;
-                            });
-                          })),
+                 
                   Container(
                     margin: const EdgeInsets.symmetric(horizontal: 20),
                     child: DropdownButton(
@@ -158,6 +129,36 @@ class _CreateComplaintPageState extends State<CreateComplaintPage> {
                           });
                         }),
                   ),
+                   Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 20),
+                      child: DropdownButton(
+                          dropdownColor: Colors.white,
+                          focusColor: Colors.transparent,
+                          hint: const Text(
+                            'Bairro',
+                            style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black),
+                          ),
+                          style: const TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black),
+                          itemHeight: 70,
+                          isExpanded: true,
+                          value: district,
+                          items: controller.routesList.map((route) {
+                            return DropdownMenuItem(
+                              value: route.district,
+                              child: Text(route.district!),
+                            );
+                          }).toList(),
+                          onChanged: (newValue) {
+                            setState(() {
+                              district = newValue;
+                            });
+                          })),
                   Container(
                     margin: const EdgeInsets.symmetric(horizontal: 20),
                     child: TextFormField(
@@ -174,7 +175,7 @@ class _CreateComplaintPageState extends State<CreateComplaintPage> {
                         }
                       },
                       decoration: const InputDecoration(
-                        labelText: 'Descrição',
+                        labelText: 'Denúncia',
                         errorStyle: TextStyle(
                           color: Colors.red,
                         ),

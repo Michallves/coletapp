@@ -68,15 +68,21 @@ class MainDrawer extends StatelessWidget {
           )),
         ]),
         Container(
-          height: 200,
+          height: 120,
           width: double.infinity,
           alignment: Alignment.center,
-          child: Icon(
-            Icons.recycling,
-            size: 80,
-            color: Colors.green,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Icon(
+                Icons.recycling,
+                size: 80,
+                color: Colors.green,
+              ),
+              const Text('Versão 1.0')
+            ],
           ),
-        )
+        ),
       ],
     ));
   }

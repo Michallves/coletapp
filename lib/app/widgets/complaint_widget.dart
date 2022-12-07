@@ -36,10 +36,11 @@ class _ComplaintwidgetState extends State<Complaintwidget> {
             ),
             iconColor: Colors.green,
             title: Text(
-              widget.district!,
+              widget.street!,
+            
             ),
             subtitle: Text(
-              widget.street!,
+                widget.district!,
             ),
             trailing: Text(
               textAlign: TextAlign.end,
@@ -77,7 +78,7 @@ class _ComplaintwidgetState extends State<Complaintwidget> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  "Descrição:",
+                  "Denúncia:",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
                 const Padding(padding: EdgeInsets.all(5)),
