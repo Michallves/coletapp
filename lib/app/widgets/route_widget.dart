@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class RouteWidget extends StatefulWidget {
-  
   const RouteWidget({super.key, this.district, this.street, this.date});
   final Map? date;
   final String? district;
@@ -25,13 +24,13 @@ class _RouteWidgetState extends State<RouteWidget> {
           textColor: Colors.black,
           leading: Image.asset(
             'assets/images/rotas.png',
-            color: Colors.black,
+            color: Colors.green,
             width: 35,
           ),
           title: Text(
-            widget.district!,
+            widget.street!,
           ),
-          subtitle: Text(widget.street!),
+          subtitle: Text(widget.district!),
           trailing: Icon(
             isOpen == false ? Icons.arrow_drop_down : Icons.arrow_drop_up,
             size: 30,
@@ -90,7 +89,7 @@ class _RouteWidgetState extends State<RouteWidget> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               const Text(
-                                'TERÇA-FEIRA',
+                                'QUARTA-FEIRA',
                                 style: TextStyle(),
                               ),
                               Text(widget.date!["quarta"]),
@@ -110,7 +109,7 @@ class _RouteWidgetState extends State<RouteWidget> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               const Text(
-                                'TERÇA-FEIRA',
+                                'QUINTA-FEIRA',
                                 style: TextStyle(),
                               ),
                               Text(widget.date!["quinta"]),
@@ -130,7 +129,7 @@ class _RouteWidgetState extends State<RouteWidget> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           const Text(
-                            'TERÇA-FEIRA',
+                            'SEXTA-FEIRA',
                             style: TextStyle(),
                           ),
                           Text(widget.date!["sexta"]),

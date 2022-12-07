@@ -15,7 +15,7 @@ dependencies:
     sdk: flutter
 
   get:
-
+  provider:
   firebase_core: ^2.3.0
   firebase_auth: ^4.1.3
   firebase_storage: ^11.0.6
@@ -23,6 +23,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   easy_splash_screen:
   image_picker: ^0.8.6
+  date_format: ^2.0.7
   
 dev_dependencies:
   flutter_test:

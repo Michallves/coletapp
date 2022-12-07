@@ -1,6 +1,8 @@
 // ignore: constant_identifier_names
 abstract class Routes {
   static const INITIAL = '/';
-  static const HOME = '/home';
+  static const COMPLAINTS = '/complaints';
+  static const ROUTES = '/routes';
   static const CREATECOMPLAINT = '/createComplaint';
+  static const TERMOS = '/termos';
 }
