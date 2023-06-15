@@ -1,9 +1,10 @@
-import 'package:coletapp/app/controllers/home_controller.dart';
+
+import 'package:coletapp/layers/controllers/home_controller.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'firebase_options.dart';
+import '../firebase_options.dart';
 
 initConfigurations() async {
   WidgetsFlutterBinding.ensureInitialized();

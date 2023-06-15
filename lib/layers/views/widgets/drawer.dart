@@ -1,5 +1,5 @@
-import 'package:coletapp/app/controllers/home_controller.dart';
-import 'package:coletapp/app/routes/app_routes.dart';
+import 'package:coletapp/core/routes/app_routes.dart';
+import 'package:coletapp/layers/controllers/home_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

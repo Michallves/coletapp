@@ -1,13 +1,13 @@
-import 'package:coletapp/app/models/complaint_model.dart';
-import 'package:coletapp/app/routes/app_routes.dart';
-import 'package:coletapp/app/widgets/complaint_widget.dart';
-import 'package:coletapp/app/widgets/drawer.dart';
+import 'package:coletapp/core/routes/app_routes.dart';
+import 'package:coletapp/layers/models/complaint_model.dart';
+import 'package:coletapp/layers/views/widgets/complaint_widget.dart';
+import 'package:coletapp/layers/views/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/home_controller.dart';
 
-class ComplaintsPage extends StatelessWidget {
-  ComplaintsPage({super.key});
+class ComplaintsView extends StatelessWidget {
+  ComplaintsView({super.key});
   final controller = Get.put(HomeController());
 
   @override

@@ -1,9 +1,9 @@
-import 'package:coletapp/app/routes/app_routes.dart';
-import 'package:coletapp/app/theme/app_theme.dart';
+import 'package:coletapp/core/routes/app_pages.dart';
+import 'package:coletapp/core/routes/app_routes.dart';
+import 'package:coletapp/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'app/routes/app_pages.dart';
-import 'config.dart';
+import 'core/config.dart';
 
 Future<void> main() async {
   await initConfigurations();

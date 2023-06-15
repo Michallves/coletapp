@@ -1,12 +1,12 @@
-import 'package:coletapp/app/models/route_model.dart';
-import 'package:coletapp/app/widgets/drawer.dart';
-import 'package:coletapp/app/widgets/route_widget.dart';
+import 'package:coletapp/layers/models/route_model.dart';
+import 'package:coletapp/layers/views/widgets/drawer.dart';
+import 'package:coletapp/layers/views/widgets/route_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/home_controller.dart';
 
-class RoutesPage extends StatelessWidget {
-  RoutesPage({super.key});
+class RoutesView extends StatelessWidget {
+  RoutesView({super.key});
   final controller = Get.put(HomeController());
 
   @override

@@ -1,21 +1,20 @@
 import 'dart:io';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:coletapp/app/controllers/home_controller.dart';
-import 'package:coletapp/app/routes/app_routes.dart';
+import 'package:coletapp/core/routes/app_routes.dart';
+import 'package:coletapp/layers/controllers/home_controller.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
-class CreateComplaintPage extends StatefulWidget {
-  const CreateComplaintPage({super.key});
+class CreateComplaintView extends StatefulWidget {
+  const CreateComplaintView({super.key});
 
   @override
-  State<CreateComplaintPage> createState() => _CreateComplaintPageState();
+  State<CreateComplaintView> createState() => _CreateComplaintViewState();
 }
 
-class _CreateComplaintPageState extends State<CreateComplaintPage> {
+class _CreateComplaintViewState extends State<CreateComplaintView> {
   @override
   final controller = Get.put(HomeController());
   String image = '';

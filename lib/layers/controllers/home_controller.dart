@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:coletapp/app/models/complaint_model.dart';
+import 'package:coletapp/layers/models/complaint_model.dart';
 import 'package:get/get.dart';
 
 import '../models/route_model.dart';

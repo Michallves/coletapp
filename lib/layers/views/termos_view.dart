@@ -1,9 +1,8 @@
+import 'package:coletapp/layers/views/widgets/drawer.dart';
 import 'package:flutter/material.dart';
 
-import '../widgets/drawer.dart';
-
-class TermosPage extends StatelessWidget {
-  const TermosPage({super.key});
+class TermosView extends StatelessWidget {
+  const TermosView({super.key});
 
   @override
   Widget build(BuildContext context) {
