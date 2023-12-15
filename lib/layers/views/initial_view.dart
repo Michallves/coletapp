@@ -9,10 +9,10 @@ class InitialView extends StatelessWidget {
   Widget build(BuildContext context) {
     return EasySplashScreen(
       logo: Image.asset('assets/images/coletapp.png'),
-      backgroundColor: Colors.green,
+      backgroundColor: const Color.fromARGB(255, 255, 183, 0),
       showLoader: true,
       loaderColor: Colors.white,
-      logoWidth: 60,
+      logoWidth: 120,
       loadingText: const Text(
         "Carregando...",
         style: TextStyle(color: Colors.white),

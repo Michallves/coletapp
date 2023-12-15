@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 final ThemeData appThemeData = ThemeData(
-    appBarTheme: AppBarTheme(backgroundColor: Colors.green),
-    primaryColor: Colors.green,
+    appBarTheme: const AppBarTheme(backgroundColor: Color.fromARGB(255, 255, 183, 0)),
+    primaryColor: const Color.fromARGB(255, 251, 199, 29),
     textTheme:
-        TextTheme(bodyText1: TextStyle(color: Colors.white)));
+        const TextTheme(bodyText1: TextStyle(color: Colors.white)));

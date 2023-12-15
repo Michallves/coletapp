@@ -24,7 +24,7 @@ class _RouteWidgetState extends State<RouteWidget> {
           textColor: Colors.black,
           leading: Image.asset(
             'assets/images/rotas.png',
-            color: Colors.green,
+            color: const Color.fromARGB(255, 255, 183, 0),
             width: 35,
           ),
           title: Text(

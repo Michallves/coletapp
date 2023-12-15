@@ -15,15 +15,15 @@ class ComplaintsView extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () => Get.toNamed(Routes.CREATECOMPLAINT),
-        backgroundColor: Colors.green,
+        backgroundColor: const Color.fromARGB(255, 255, 183, 0),
         child: const Icon(Icons.add),
       ),
       appBar: AppBar(title: const Text("Denúncias"), actions: [
         Container(
           margin: const EdgeInsets.fromLTRB(0, 0, 20, 0),
-          width: 60,
+          width: 150,
           child: Image.asset(
-            'assets/images/coletapp.png',
+            'assets/images/coletapp menu.png',
             fit: BoxFit.contain,
           ),
         )
@@ -51,7 +51,7 @@ class ComplaintsView extends StatelessWidget {
                   }))
               : const Center(
                   child: CircularProgressIndicator(
-                    color: Colors.green,
+                    color: Color.fromARGB(255, 255, 183, 0),
                   ),
                 ))),
     );

@@ -15,9 +15,9 @@ class RoutesView extends StatelessWidget {
       appBar: AppBar(title: const Text('Rotas'), actions: [
         Container(
           margin: const EdgeInsets.fromLTRB(0, 0, 20, 0),
-          width: 60,
+          width: 150,
           child: Image.asset(
-            'assets/images/coletapp.png',
+            'assets/images/coletapp menu.png',
             fit: BoxFit.contain,
           
           ),
@@ -39,7 +39,7 @@ class RoutesView extends StatelessWidget {
                   }))
               : const Center(
                   child: CircularProgressIndicator(
-                    color: Colors.green,
+                    color: Color.fromARGB(255, 255, 183, 0),
                   ),
                 ))),
     );

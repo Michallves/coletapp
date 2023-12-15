@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:date_format/date_format.dart';
 import 'package:flutter/material.dart';
+import 'package:image_network/image_network.dart';
 
 class Complaintwidget extends StatefulWidget {
   const Complaintwidget(
@@ -34,13 +35,12 @@ class _ComplaintwidgetState extends State<Complaintwidget> {
               Icons.warning_amber,
               size: 40,
             ),
-            iconColor: Colors.green,
+            iconColor: const Color.fromARGB(255, 255, 183, 0),
             title: Text(
               widget.street!,
-            
             ),
             subtitle: Text(
-                widget.district!,
+              widget.district!,
             ),
             trailing: Text(
               textAlign: TextAlign.end,
@@ -50,27 +50,13 @@ class _ComplaintwidgetState extends State<Complaintwidget> {
               ),
             ),
           ),
-          Image.network(widget.image!, errorBuilder:
-              (BuildContext context, Object exception, StackTrace? stackTrace) {
-            return Container();
-          }, loadingBuilder: (BuildContext context, Widget child,
-              ImageChunkEvent? loadingProgress) {
-            if (loadingProgress == null) {
-              return child;
-            }
-            return Container(
-              alignment: Alignment.center,
-              height: 200,
-              width: double.infinity,
-              child: CircularProgressIndicator(
-                color: Colors.green,
-                value: loadingProgress.expectedTotalBytes != null
-                    ? loadingProgress.cumulativeBytesLoaded /
-                        loadingProgress.expectedTotalBytes!
-                    : null,
-              ),
-            );
-          }),
+          ImageNetwork(
+              image: widget.image!,
+              height: 300,
+              width: MediaQuery.of(context).size.width,
+              onLoading: CircularProgressIndicator(
+                color: Theme.of(context).colorScheme.primary,
+              )),
           Container(
             margin: const EdgeInsets.all(10),
             width: double.infinity,

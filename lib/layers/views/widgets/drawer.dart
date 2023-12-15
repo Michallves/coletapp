@@ -16,16 +16,16 @@ class MainDrawer extends StatelessWidget {
         Column(children: [
           Container(
             alignment: Alignment.center,
-            color: Colors.green,
+            color: const Color.fromARGB(255, 255, 183, 0),
             width: double.infinity,
             height: 180,
             child: Column(
               children: [
                 const Padding(padding: EdgeInsets.all(30)),
                 Image.asset(
-                  'assets/images/coletapp.png',
+                  'assets/images/coletapp menu.png',
                   fit: BoxFit.contain,
-                  width: 100,
+                  width: 250,
                 ),
               ],
             ),
@@ -71,15 +71,15 @@ class MainDrawer extends StatelessWidget {
           height: 120,
           width: double.infinity,
           alignment: Alignment.center,
-          child: Column(
+          child: const Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Icon(
                 Icons.recycling,
                 size: 80,
-                color: Colors.green,
+                color: Color.fromARGB(255, 255, 183, 0),
               ),
-              const Text('Versão 1.0')
+              Text('Versão 1.0')
             ],
           ),
         ),

@@ -24,6 +24,8 @@ dependencies:
   easy_splash_screen:
   image_picker: ^0.8.6
   date_format: ^2.0.7
+  image_network: ^2.5.4
+  brasil_fields: ^1.14.1
   
 dev_dependencies:
   flutter_test:
