@@ -6,6 +6,7 @@ import 'package:coletapp/layers/controllers/home_controller.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'dart:ui_web';
 import 'package:image_picker/image_picker.dart';
 
 class CreateComplaintView extends StatefulWidget {
@@ -252,38 +253,53 @@ class _CreateComplaintViewState extends State<CreateComplaintView> {
   _showModal() => showModalBottomSheet(
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(10), topRight: Radius.circular(10)),
+          topLeft: Radius.circular(10),
+          topRight: Radius.circular(10),
+        ),
       ),
       context: context,
       builder: (context) => SizedBox(
-            height: 200,
-            child: Column(
-              children: <Widget>[
-                const SizedBox(
-                  height: 50,
-                  child: Center(
-                    child: Text(
-                      'Adicionar Imagem',
-                      style: TextStyle(fontSize: 16),
-                    ),
-                  ),
+        height: 200,
+        child: Column(
+          children: <Widget>[
+            const SizedBox(
+              height: 50,
+              child: Center(
+                child: Text(
+                  'Adicionar Imagem',
+                  style: TextStyle(fontSize: 16),
                 ),
-                const Divider(height: 2),
-                ListTile(
-                  iconColor: const Color.fromARGB(255, 255, 183, 0),
-                  title: const Text('Camera'),
-                  leading: const Icon(Icons.camera_alt_outlined),
-                  onTap: getImageCamera,
-                ),
-                ListTile(
-                  iconColor: const Color.fromARGB(255, 255, 183, 0),
-                  title: const Text('Galeria'),
-                  leading: const Icon(
-                    Icons.image_outlined,
-                  ),
-                  onTap: getImageGallery,
-                ),
-              ],
+              ),
             ),
-          ));
+            const Divider(height: 2),
+            TextButton(
+              onPressed: getImageCamera,
+              child: const ListTile(
+                iconColor: Color.fromARGB(255, 255, 183, 0),
+                title: Text('Camera'),
+                leading: Icon(Icons.camera_alt_outlined),
+              ),
+            ),
+            TextButton(
+              onPressed: getImageGallery,
+              child: const ListTile(
+                iconColor: Color.fromARGB(255, 255, 183, 0),
+                title: Text('Galeria'),
+                leading: Icon(Icons.image_outlined),
+              ),
+            ),
+            const Divider(height: 2),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop(); // Close the bottom sheet on cancel
+              },
+              child: const ListTile(
+                title: Text('Cancelar'),
+                leading: Icon(Icons.cancel),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
 }
