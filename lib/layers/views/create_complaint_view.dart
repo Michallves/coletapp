@@ -206,11 +206,9 @@ class _CreateComplaintViewState extends State<CreateComplaintView> {
                             [() => Validators.isNotEmpty(value)]),
                         decoration: InputDecoration(
                           labelText: 'Denúncia',
+                          labelStyle: const TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
                           errorStyle: const TextStyle(
                             color: Colors.red,
-                          ),
-                          labelStyle: const TextStyle(
-                            color: Colors.black,
                           ),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10),
